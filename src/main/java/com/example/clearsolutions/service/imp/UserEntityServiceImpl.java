@@ -73,7 +73,7 @@ public class UserEntityServiceImpl implements UserEntityService {
     }
 
     @Override
-    public UserEntity updateUserNameByUserId(UpdateUserNameDto updateUserNameDto) {
+    public UserEntity updateUserName(UpdateUserNameDto updateUserNameDto) {
         if(userEntityRepository.findById(updateUserNameDto.getUserId())==null){
             throw new UserNotFoundException("User with id - " + updateUserNameDto.getUserId() + " not found");
         }

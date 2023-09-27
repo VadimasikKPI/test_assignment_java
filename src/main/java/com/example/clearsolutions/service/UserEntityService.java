@@ -11,7 +11,7 @@ import java.util.List;
 public interface UserEntityService {
     UserEntity createUser(UserDto userDto);
     UserEntity updateUser(UpdateUserDto updateUserDto);
-    UserEntity updateUserNameByUserId(UpdateUserNameDto userDto);
+    UserEntity updateUserName(UpdateUserNameDto userDto);
     String deleteUserByUserId(int userId);
     List<UserEntity> searchForUsersByBirthDateRange(UserBirthDateRangeDto userBirthDateRangeDto);
 

@@ -10,8 +10,8 @@ import java.time.LocalDate;
 
 public class UpdateUserNameDto {
     private int userId;
-   @Valid
-   @NotBlank
+    @Valid
+    @NotBlank
     private String firstName;
     @Valid
     @NotBlank

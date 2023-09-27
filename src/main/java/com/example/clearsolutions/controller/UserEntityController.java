@@ -31,7 +31,7 @@ public class UserEntityController {
 
     @PostMapping
     public ResponseEntity<UserEntity> createUser(@Valid @RequestBody UserDto userDto){
-        return ResponseEntity.status(HttpStatus.OK).body(userEntityService.createUser(userDto));
+        return ResponseEntity.status(HttpStatus.CREATED).body(userEntityService.createUser(userDto));
     }
 
     @PutMapping
@@ -41,7 +41,7 @@ public class UserEntityController {
 
     @PutMapping(USER_UPDATE_NAME)
     public ResponseEntity<UserEntity> updateUserName(@Valid @RequestBody UpdateUserNameDto updateUserNameDto){
-        return ResponseEntity.status(HttpStatus.OK).body(userEntityService.updateUserNameByUserId(updateUserNameDto));
+        return ResponseEntity.status(HttpStatus.OK).body(userEntityService.updateUserName(updateUserNameDto));
     }
 
     @DeleteMapping(USER_FIND_BY_ID)
